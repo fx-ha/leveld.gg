@@ -15,7 +15,7 @@ const NavLink = ({ href, title }: { href: string; title: string }) => {
         letterSpacing=".07692308em"
         textTransform="uppercase"
         fontWeight={fontWeight}
-        _hover={{ textDecoration: 'none', color: 'white' }}
+        _hover={{ textDecoration: 'none', color: 'white', fontWeight: 'bold' }}
       >
         {title}
       </Link>
