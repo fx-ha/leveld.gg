@@ -1,2 +1,2 @@
-# leveld
-Letterboxd for Games
+# leveld.games
+Videogame Diary inspired by Letterboxd.com
