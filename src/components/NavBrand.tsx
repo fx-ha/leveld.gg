@@ -7,12 +7,13 @@ const NavBrand = () => (
   <>
     <Box w="10" h="6" mr="2">
       <NextLink href="/" passHref>
-        <Link>
+        <Link title="Home">
           <NextImage
             src={logo}
             width={1019}
             height={562}
             layout="responsive"
+            alt="Logo"
             priority
           />
         </Link>

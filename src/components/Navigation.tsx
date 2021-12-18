@@ -26,7 +26,11 @@ const Navigation = () => (
             fontSize="smaller"
             letterSpacing=".07692308em"
             textTransform="uppercase"
-            _hover={{ textDecoration: 'none', color: '#fff' }}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bold',
+            }}
           >
             Sign In
           </Link>
@@ -36,7 +40,11 @@ const Navigation = () => (
             fontSize="smaller"
             letterSpacing=".07692308em"
             textTransform="uppercase"
-            _hover={{ textDecoration: 'none', color: '#fff' }}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bold',
+            }}
           >
             Create Account
           </Link>
@@ -52,10 +60,17 @@ const Navigation = () => (
               borderRadius="3xl"
               background="#2c3440"
               borderColor="#2c3440"
+              color="white"
+              focusBorderColor="gray"
+              _focus={{ color: '#89a', background: 'white' }}
             />
 
             <InputRightElement>
-              <SearchIcon color="#718192" />
+              <SearchIcon
+                color="#718192"
+                cursor="pointer"
+                onClick={() => console.log('TODO: handle search')}
+              />
             </InputRightElement>
           </InputGroup>
         </HStack>
