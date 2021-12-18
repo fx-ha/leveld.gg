@@ -5,6 +5,7 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "conventionalCommits.scopes": [
-    "deps"
+    "deps",
+    "web"
   ]
 }
