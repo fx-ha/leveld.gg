@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     </Head>
 
     <Flex
-      backgroundImage="linear-gradient(#1d232a, #14181c)"
+      bgGradient="linear-gradient(to-b, #1d232a, #14181c)"
       color="white"
       alignItems="center"
       direction="column"
@@ -20,11 +20,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     >
       <Navigation />
 
-      <Container maxW="5xl">
-        <main>{children}</main>
-
-        <Footer />
+      <Container as="main" maxW="5xl" mb="10">
+        {children}
       </Container>
+
+      <Footer />
     </Flex>
   </>
 )

@@ -1,0 +1,12 @@
+// TODO better naming convention
+export const nameLinkColor = '#abc'
+export const welcomeColor = '#789'
+export const commentNumberColor = '#678'
+export const yearColor = '#89a'
+export const textColor = '#9ab'
+export const buttonTextColor = '#def'
+export const getStartedColor = '#00c030'
+export const logColor = '#00b020'
+export const hoverLogColor = '#00a11d'
+export const starColor = '#00e054'
+export const emptyStarColor = '#323f4c'
