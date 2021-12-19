@@ -3,7 +3,7 @@ import { Container, Flex, HStack, Link } from '@chakra-ui/react'
 import { textColor } from '../constants'
 
 const Footer = () => (
-  <Flex mt="auto" py="5" bg="#2c3440" w="full">
+  <Flex as="footer" mt="auto" py="5" bg="#2c3440" w="full">
     <Container maxW="5xl">
       <HStack spacing="6">
         <NextLink href="/about" passHref>
