@@ -2,9 +2,12 @@ import NextLink from 'next/link'
 import {
   Box,
   Button,
+  Flex,
   Grid,
   GridItem,
+  Heading,
   HStack,
+  LightMode,
   Link,
   Text,
 } from '@chakra-ui/react'
@@ -17,17 +20,42 @@ import {
 } from 'react-icons/ai'
 import { GrTextAlignLeft } from 'react-icons/gr'
 import { Layout } from '../components'
+import {
+  buttonTextColor,
+  commentNumberColor,
+  nameLinkColor,
+  textColor,
+  welcomeColor,
+  yearColor,
+} from '../constants'
 
 const Index = () => (
   <Layout>
-    <Text>Track games you&#39;ve played.</Text>
-    <Text>Save those you want to play.</Text>
-    <Text>Tell your friends what&#39;s good.</Text>
+    <Flex direction="column" alignItems="center" mb="10">
+      <Heading as="h2" size="lg" fontFamily="serif" mb="3">
+        Track games you&#39;ve played.
+      </Heading>
+      <Heading as="h2" size="lg" fontFamily="serif" mb="3">
+        Save those you want to play.
+      </Heading>
+      <Heading as="h2" size="lg" fontFamily="serif">
+        Tell your friends what&#39;s good.
+      </Heading>
+    </Flex>
 
-    <Button colorScheme="green">Get started - it&#39;s free!</Button>
-    <Text>The social network for gamers.</Text>
+    <Flex justifyContent="center" mb="10">
+      <LightMode>
+        <Button colorScheme="green">Get started - it&#39;s free!</Button>
+      </LightMode>
+    </Flex>
 
-    <HStack>
+    <Flex justifyContent="center" mb="14">
+      <Text color={welcomeColor}>
+        The social network for gamers. Soon avaiable on ...
+      </Text>
+    </Flex>
+
+    <HStack mb="14">
       <Box>Game 1</Box>
       <Box>Game 2</Box>
       <Box>Game 3</Box>
@@ -36,8 +64,8 @@ const Index = () => (
       <Box>Game 6</Box>
     </HStack>
 
-    <Box>
-      <Text>Leveld let&#39;s you...</Text>
+    <Box mb="14">
+      <Text color={textColor}>Leveld let&#39;s you...</Text>
       <Grid gap={4} templateColumns="repeat(3, 1fr)">
         <NextLink href="/welcome/#mark-played">
           <GridItem>
@@ -120,27 +148,34 @@ const Index = () => (
       </Grid>
     </Box>
 
-    <Text>Just reviewed...</Text>
-    <Text>(stat of total games logged)</Text>
-    <Text>(list of latest reviews)</Text>
-    <Text>
-      Write and share reviews. Compile your own lists. Share your life in games.
-    </Text>
-    <Text>
-      Below are some popular reviews and lists from this week.{' '}
-      <Link>
-        <b>Sign up</b>
-      </Link>{' '}
-      to create your own.
-    </Text>
-    <Text>Popular reviews this week</Text>
-    <Text>More</Text>
+    <Box mb="10">
+      <Text>Just reviewed...</Text>
+      <Text>(stat of total games logged)</Text>
+      <Text>(list of latest reviews)</Text>
+    </Box>
+
+    <Flex mb="10" direction="column" alignItems="center">
+      <Text fontSize="2xl" mb="2" color={nameLinkColor}>
+        Write and share reviews. Compile your own lists. Share your life in
+        games.
+      </Text>
+      <Text color={yearColor}>
+        Below are some popular reviews and lists from this week.{' '}
+        <Link color={buttonTextColor}>
+          <b>Sign up</b>
+        </Link>{' '}
+        to create your own.
+      </Text>
+    </Flex>
+
+    <Text color={textColor}>Popular reviews this week</Text>
+    <Text color={commentNumberColor}>More</Text>
     <Text>(list of popular reviews)</Text>
-    <Text>Popular lists</Text>
-    <Text>More</Text>
+    <Text color={textColor}>Popular lists</Text>
+    <Text color={commentNumberColor}>More</Text>
     <Text>(list of popular lists)</Text>
-    <Text>Popular reviewers</Text>
-    <Text>More</Text>
+    <Text color={textColor}>Popular reviewers</Text>
+    <Text color={commentNumberColor}>More</Text>
     <Text>(list of popular reviewers)</Text>
   </Layout>
 )

@@ -5,6 +5,7 @@ const fonts = {
   // mono: `'Menlo', monospace`,
   heading: `'Inter', sans-serif`,
   body: `'Inter', sans-serif`,
+  serif: `'Source Serif Pro', serif`,
 }
 
 const breakpoints = createBreakpoints({
