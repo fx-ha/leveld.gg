@@ -5,7 +5,7 @@ import logo from '../../public/logo.png'
 
 const NavBrand = () => (
   <>
-    <Box w="10" h="6" mr="2">
+    <Box w="10" h="6" mr="2" zIndex="5">
       <NextLink href="/" passHref>
         <Link title="Home">
           <NextImage
@@ -22,6 +22,7 @@ const NavBrand = () => (
 
     <NextLink href="/" passHref>
       <Link
+        zIndex="5"
         color="white"
         letterSpacing=".07692308em"
         textTransform="uppercase"
