@@ -13,14 +13,14 @@ import {
 import { NavBrand, NavLink } from '.'
 
 const Navigation = () => (
-  <Box py="5" mb="10" bg="#14181c" w="full">
+  <Box py="5" mb="10" bg="#14181d" w="full">
     <Container maxW="5xl">
       <Flex as="nav" alignItems="center">
         <NavBrand />
 
         <Spacer />
 
-        <HStack spacing={5}>
+        <HStack zIndex="5" spacing={5}>
           <Link
             color="#d8e0e8"
             fontSize="smaller"
