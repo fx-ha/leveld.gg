@@ -4,8 +4,6 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
-  GridItem,
   Heading,
   HStack,
   LightMode,
@@ -60,9 +58,11 @@ const Index = () => (
         <Heading as="h2" size="xl" fontFamily="serif" mb="3" zIndex="5">
           Track games you&#39;ve played.
         </Heading>
+
         <Heading as="h2" size="xl" fontFamily="serif" mb="3" zIndex="5">
           Save those you want to play.
         </Heading>
+
         <Heading as="h2" size="xl" fontFamily="serif" zIndex="5">
           Tell your friends what&#39;s good.
         </Heading>
@@ -82,7 +82,7 @@ const Index = () => (
 
       <Flex justifyContent="center" mb="14">
         <Text color={welcomeColor} zIndex="5">
-          The social network for gamers. Soon avaiable on ...
+          The social network for gamers. Soon available on ...
         </Text>
       </Flex>
 
@@ -97,86 +97,115 @@ const Index = () => (
 
       <Box mb="14">
         <Text color={textColor}>Leveld let&#39;s you...</Text>
-        <Grid gap={4} templateColumns="repeat(3, 1fr)">
-          <NextLink href="/welcome/#mark-played">
-            <GridItem>
-              <Button
-                leftIcon={<AiFillEye />}
+
+        <HStack spacing="2" mb="2">
+          <NextLink href="/welcome/#mark-played" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#00c030' }}
                 textAlign="left"
-                whiteSpace="normal"
+                p="6"
+                borderRadius="md"
+                width="320px"
                 height="100%"
               >
+                <AiFillEye />
                 Keep track of every game you&#39;ve ever played (or just start
                 from the day you join)
-              </Button>
-            </GridItem>
+              </Box>
+            </Link>
           </NextLink>
-          <NextLink href="/welcome/#mark-played">
-            <GridItem>
-              <Button
-                leftIcon={<AiFillHeart />}
+
+          <NextLink href="/welcome/#mark-played" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#ee7000' }}
                 textAlign="left"
-                whiteSpace="normal"
+                p="6"
+                borderRadius="md"
+                width="320px"
                 height="100%"
               >
+                <AiFillHeart />
                 Show some love for your favorite films, lists and reviews with a
                 &#34;like&#34;
-              </Button>
-            </GridItem>
+              </Box>
+            </Link>
           </NextLink>
-          <NextLink href="/welcome/#logging-games">
-            <GridItem>
-              <Button
-                leftIcon={<GrTextAlignLeft />}
+
+          <NextLink href="/welcome/#logging-games" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#209ce4' }}
                 textAlign="left"
-                whiteSpace="normal"
+                p="6"
+                borderRadius="md"
+                width="320px"
                 height="100%"
               >
+                <GrTextAlignLeft />
                 Write and share reviews, and follow friends and other members to
                 read theirs
-              </Button>
-            </GridItem>
+              </Box>
+            </Link>
           </NextLink>
-          <NextLink href="/welcome/#mark-played">
-            <GridItem>
-              <Button
-                leftIcon={<AiFillStar />}
+        </HStack>
+
+        <HStack>
+          <NextLink href="/welcome/#mark-played" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#00c030' }}
                 textAlign="left"
-                whiteSpace="normal"
-                height="100%"
+                p="6"
+                borderRadius="md"
+                width="320px"
               >
+                <AiFillStar />
                 Rate each film on a five-star scale (with halves) to record and
                 share your reaction
-              </Button>
-            </GridItem>
+              </Box>
+            </Link>
           </NextLink>
-          <NextLink href="/pro">
-            <GridItem>
-              <Button
-                leftIcon={<AiFillCalendar />}
+
+          <NextLink href="/pro" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#ee7000' }}
                 textAlign="left"
-                whiteSpace="normal"
-                height="100%"
+                p="6"
+                borderRadius="md"
+                width="320px"
               >
-                Keep a diary of your film watching (and upgrade to <b>Pro</b>{' '}
-                for comprehensive stats)
-              </Button>
-            </GridItem>
+                <AiFillCalendar />
+                Keep a diary of your film watching (and upgrade to Pro for
+                comprehensive stats)
+              </Box>
+            </Link>
           </NextLink>
-          <NextLink href="/welcome/#lists">
-            <GridItem>
-              <Button
-                leftIcon={<AiFillAppstore />}
+
+          <NextLink href="/welcome/#lists" passHref>
+            <Link _hover={{ textDecoration: 'none' }}>
+              <Box
+                bg="#456"
+                _hover={{ backgroundColor: '#209ce4' }}
                 textAlign="left"
-                whiteSpace="normal"
-                height="100%"
+                p="6"
+                borderRadius="md"
+                width="320px"
               >
+                <AiFillAppstore />
                 Compile and share lists of games on any topic and keep a
                 watchlist of games to see
-              </Button>
-            </GridItem>
+              </Box>
+            </Link>
           </NextLink>
-        </Grid>
+        </HStack>
       </Box>
 
       <Box mb="10">
@@ -190,6 +219,7 @@ const Index = () => (
           Write and share reviews. Compile your own lists. Share your life in
           games.
         </Text>
+
         <Text color={yearColor}>
           Below are some popular reviews and lists from this week.{' '}
           <Link color={buttonTextColor}>
