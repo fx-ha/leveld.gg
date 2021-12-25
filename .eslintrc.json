@@ -1,12 +1,17 @@
 {
   "extends": [
+    "plugin:jsx-a11y/recommended",
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "next/core-web-vitals"
   ],
   "rules": {
     "prefer-const": "warn",
     "no-undef": "off",
-    "no-unused-vars": ["error", { "args": "none" }]
+    "no-unused-vars": ["error", { "args": "none" }],
+    "padding-line-between-statements": [
+      "warn", { "blankLine": "always", "prev": "*", "next": "return" }
+  ]
   }
 }
