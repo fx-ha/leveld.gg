@@ -1,2 +1,10 @@
-# leveld.games
-Videogame Diary inspired by Letterboxd.com
+# Leveld
+Videogame diary inspired by Letterboxd.com
+
+## Built with
+- Apollo
+- Chakra UI
+- GraphQL
+- Next.js
+- React
+- Typescript
