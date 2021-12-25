@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Link, Text } from '@chakra-ui/react'
-import { Greeting, Layout } from '../components'
+import { FeatureList, Greeting, Layout } from '../components'
 import {
   buttonTextColor,
   commentNumberColor,
@@ -7,7 +7,6 @@ import {
   textColor,
   yearColor,
 } from '../constants'
-import FeatureList from '../components/FeatureList'
 
 const Index = () => (
   <>
