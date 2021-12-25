@@ -1,7 +1,7 @@
 import NextLink from 'next/link'
 import { useState } from 'react'
 import { Box, Flex, Link } from '@chakra-ui/react'
-import { buttonTextColor, iconColor } from '../constants'
+import { buttonTextColor, grayButtonBackground, iconColor } from '../constants'
 
 const FeatureBox = ({
   href,
@@ -20,9 +20,8 @@ const FeatureBox = ({
     <NextLink href={href} passHref>
       <Link _hover={{ textDecoration: 'none' }}>
         <Flex
-          bg="#456"
+          bg={grayButtonBackground}
           _hover={{ backgroundColor, color: '#fff' }}
-          textAlign="left"
           p="5"
           borderRadius="3px"
           height="100%"
