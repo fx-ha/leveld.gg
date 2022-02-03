@@ -1,4 +1,4 @@
-# Leveld
+# leveld.gg
 Videogame diary inspired by Letterboxd.com
 
 ## Built with
